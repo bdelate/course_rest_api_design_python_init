@@ -17,6 +17,6 @@ def get_bark(request, bark_id: int):
     Bark detail endpoint that returns a single bark.
     """
     if bark_id not in [1, 2, 3]:
-        return 404, {"detail": "Bark not found"}
+        return 404, {"error": "Bark not found"}
     return 200,{"id": bark_id, "message": f"bark {bark_id}!"}
 
